@@ -2,29 +2,6 @@ import React, {useState} from 'react';
 import {PhotoBox, PhotoIcon, ModalPhotoBox, ModalBox, ModalButtonClose} from "./PhotoGallery.styled";
 import styles from './photoGallery.module.css'
 
-
-//  import photo from "../../src/diplom/foto-list-table1.jpg";
-//  import photo2 from "../../src/diplom/IMG-da37f8f669ebccd351e99e60c9f409b6-V.jpg";
-//  import photo3 from "../../src/diplom/IMG-e4a3a8668d4391de33b21c5a4758093b-V.jpg";
-//  import photo4 from "../../src/diplom/IMG-d05fa0efc43b46092fac2a6674700e72-V.jpg";
-//   import photo5 from "../../src/diplom/IMG-f8f553aca79bf282ebe57e47298fdd68-V.jpg";
-//   import photo6 from "";
-//  import photo7 from "";
-//  import photo8 from "";
-//  import photo9 from "";
-//  import photo10 from "";
-//  import photo11 from "";
-// import photo12 from "";
-// import photo13 from "";
-// import photo14 from "";
-// import photo15 from "";
-//  import photo16 from "";
-// import photo17 from "";
-//  import photo18 from "";
-//  import photo19 from "";
-//  import photo20 from "";
-
-
 export const PhotoGallery = () => {
     const images = [
         // { src: require('../../src/stol-jee/IMG-3c708b964dad50588f2957097d8c0bf3-V.jpg'), alt: 'Photo 1' },
@@ -68,44 +45,20 @@ export const PhotoGallery = () => {
 
     return (
         <>
-        {/*<PhotoBox>*/}
-        {/*    /!*<PhotoIcon></PhotoIcon>*!/*/}
-        {/*     <PhotoIcon><img src={photo}  key={"id-1"} alt='photo' width={200} height={200} /></PhotoIcon>*/}
-        {/*    <PhotoIcon><img  src={photo2} key='photo2' alt='photo' width={200}  height={200}/></PhotoIcon>*/}
-        {/*    <PhotoIcon><img src={photo3}  key='photo3' alt='photo' width={200} height={200}/></PhotoIcon>*/}
-        {/*     <PhotoIcon><img src={photo4}  key='photo4' alt='photo' width={200} height={200}/></PhotoIcon>*/}
-        {/*     <PhotoIcon><img src={photo5}  key='photo5' alt='photo' width={200} height={200}/></PhotoIcon>*/}
-        {/*     <PhotoIcon><img src={photo6}  key='photo6' alt='photo' width={200} height={200}/></PhotoIcon>*/}
-        {/*     <PhotoIcon><img src={photo7}  key='photo7' alt='photo' width={200} height={200}/></PhotoIcon>*/}
-        {/*     <PhotoIcon><img src={photo8}  key='photo8' alt='photo' width={200} height={200}/></PhotoIcon>*/}
-        {/*     <PhotoIcon><img src={photo9}  key='photo9' alt='photo' width={200} height={200}/></PhotoIcon>*/}
-        {/*     <PhotoIcon><img src={photo10}  key='photo10' alt='photo' width={200} height={200}/></PhotoIcon>*/}
-        {/*     <PhotoIcon><img src={photo11}  key='photo11' alt='photo' width={200} height={200}/></PhotoIcon>*/}
-        {/*     <PhotoIcon><img src={photo12}  key='photo12' alt='photo' width={200} height={200}/></PhotoIcon>*/}
-        {/*     <PhotoIcon><img src={photo13}  key='photo13' alt='photo' width={200} height={200}/></PhotoIcon>*/}
-        {/*     <PhotoIcon><img src={photo14}  key='photo14' alt='photo' width={200} height={200}/></PhotoIcon>*/}
-        {/*     <PhotoIcon><img src={photo15}  key='photo15' alt='photo' width={200} height={200}/></PhotoIcon>*/}
-        {/*     <PhotoIcon><img src={photo16}  key='photo16' alt='photo' width={200} height={200}/></PhotoIcon>*/}
-        {/*     <PhotoIcon><img src={photo17}  key='photo17' alt='photo' width={200} height={200}/></PhotoIcon>*/}
-        {/*     <PhotoIcon><img src={photo18}  key='photo18' alt='photo' width={200} height={200}/></PhotoIcon>*/}
-        {/*     <PhotoIcon><img src={photo19}  key='photo19' alt='photo' width={200} height={200}/></PhotoIcon>*/}
-        {/*     <PhotoIcon><img src={photo20}  key='photo20' alt='photo' width={200} height={200}/></PhotoIcon>*/}
-        {/*</PhotoBox>*/}
-
             <PhotoBox>
-
-                   {images.map((image, index) => ( <PhotoIcon>
+                {images.map((image, index) => (
+                    <PhotoIcon>
                            <img key={index}
                                 src={image.src}
                                alt={image.alt}
                                width={200} height={200}
                                 onClick={() => handleImageClick(image)}
-                                className={styles.photoStyle}
-                       /></PhotoIcon>
+                                className={styles.photoStyle} />
+                      </PhotoIcon>
                 ))}
             </PhotoBox>
 
-        {/* Отобразить модальное окно */}
+        {/* модальное окно */}
         {selectedImage && (<ModalBox>
             <ModalPhotoBox className="modal">
                 <ModalButtonClose onClick={handleCloseModal}>Закрыть</ModalButtonClose>
