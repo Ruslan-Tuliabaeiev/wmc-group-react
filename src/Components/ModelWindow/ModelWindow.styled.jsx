@@ -38,7 +38,6 @@ export const ButtonOpen = styled.button`
     text-decoration: none;
     cursor: pointer;
   }
-
 `;
 
 export const WindowBox = styled.div`
@@ -47,20 +46,17 @@ export const WindowBox = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 9999;
-  width: 300px;
-  height: 360px;
+  width: 260px;
+  height: 340px;
   padding: 32px;
   background-color: #f6f5f5;
   font-size: 20px;
   border-radius: 14px;
   border: none;
-
-
 `;
 
 export const WindowButton = styled.button`
   position: relative;
-  
   bottom: -20px;
   padding: 10px;
   background-color: gray;
@@ -75,7 +71,6 @@ export const WindowButton = styled.button`
     color: #d5d2d2;
     background-color: #737070;
 `;
-
 
 export const ButtonClose = styled.button`
   position: absolute;
@@ -94,15 +89,14 @@ export const ButtonClose = styled.button`
   font-weight: bold;
   background-color: #e7dede;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, .15), 0 8px 10px -6px rgba(0, 0, 0, .15);
-  transition: all 0.3s ease-in-out;
-
-  &:hover,
-  &:focus {
-    color: black;
-    background-color: #a09e9e;
-    text-decoration: none;
-    cursor: pointer;
-  }
+  transition: all 0.3s ease-in-out; 
+    &:hover,
+    &:focus {
+      color: black;
+      background-color: #a09e9e;
+      text-decoration: none;
+      cursor: pointer;
+    }
 `;
 
 export const LabelNumber = styled.div`

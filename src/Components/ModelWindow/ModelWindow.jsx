@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {
     ButtonBox,
     ButtonClose,
@@ -9,7 +9,6 @@ import {
     WindowBox,
     WindowButton
 } from "./ModelWindow.styled";
-
 
 export const  ModelWindow = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -49,21 +48,34 @@ export const  ModelWindow = () => {
         const summa = Number(number1) - Number(number2) + Number(number3);
         setResultNumber(summa);
     };
+//////==function close modal
+    const modalRef = useRef(null);
+    const handleClickOutside = (event) => {
+        if (modalRef.current && !modalRef.current.contains(event.target)) {
+            setIsOpenModal(false);
+            setIsOpen(false);
+        }
+    };
 
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, );
 
     return(
-        <>
+        < >
             <ButtonBox>
             <ButtonOpen onClick={handleOpenModalToo}>Open Modal</ButtonOpen>
-            <ButtonOpen onClick={handleOpenModal}>Open Modal</ButtonOpen>
+            <ButtonOpen onClick={handleOpenModal}>Open Modal-2</ButtonOpen>
             </ButtonBox>
 
                                        {/*ModalWindow-1*/}
-            {isOpenModal && ( <Overlay >
-
-                <WindowBox>
+            {isOpenModal && ( <Overlay>
+                <WindowBox  ref={modalRef} >
+                    <span>Calculator</span>
                     <ButtonClose  onClick={handleCloseModalToo}>&times;</ButtonClose>
-                    <h3>Calculator-2</h3>
                     <div>
                         <LabelNumber><label>
                             Number 1:
@@ -95,17 +107,15 @@ export const  ModelWindow = () => {
                         <WindowButton onClick={handleCalculate}>Calculate</WindowButton>
                         {result && <ResultNumber>Result: {result}</ResultNumber>}
                     </div>
-
                 </WindowBox>
-
             </Overlay>)}
                                        {/*ModalWindow-2*/}
             {isOpen && (
                 <Overlay >
 
-                    <WindowBox>
+                    <WindowBox  ref={modalRef} >
+                        <span>Calculator-2</span>
                         <ButtonClose  onClick={handleCloseModal}>&times;</ButtonClose>
-                        <h3>Calculator</h3>
                         <div>
                             <LabelNumber><label>
                                 Number 1:
@@ -137,12 +147,8 @@ export const  ModelWindow = () => {
                             <WindowButton onClick={handleCalculateNumber}>Calculate</WindowButton>
                             {resultNumber && <ResultNumber>Result: {resultNumber}</ResultNumber>}
                         </div>
-
                     </WindowBox>
-
                 </Overlay>)}
-
         </>
-
     )
 }

@@ -20,7 +20,8 @@ export const  ButtonViber = styled.button`
   border-style: none;
   width: 50px;
   height: 45px;
-  margin-left: 10px;
+  margin-top: 7px;
+  margin-left: 15px;
   border-radius: 10px;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, .15), 0 8px 10px -6px rgba(0, 0, 0, .15);
   /* background-color: white; */
@@ -40,14 +41,10 @@ export const ButtonTelephone = styled.button`
   align-items: center;
   height: 40px;
   position: absolute;
-  right: 20xp;
   top: 0;
-  right: 0;
   border-style: none;
-  margin: 10px;
-  top: 0;
   right: 0;
-  margin: 10px;
+  margin: 12px;
   border-radius: 14px;
   background-color: #5a4ff367;
   transition: all 0.3s ease-in-out;

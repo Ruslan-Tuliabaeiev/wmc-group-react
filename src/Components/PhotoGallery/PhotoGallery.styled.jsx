@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 
-
 export const PhotoBox = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -18,11 +17,9 @@ export const PhotoIcon = styled.div`
   margin: 10px;
   list-style: none;
   transition: all 0.7s ease-in-out;
-
-&:hover {
-  transform: scale(1.5);
-}
-
+   &:hover {
+    transform: scale(1.5);
+   }
 `;
 
 export const ModalBox = styled.div`
@@ -42,8 +39,8 @@ export const ModalPhotoBox = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 9;
-  width: 60%;
-  height: 70%;
+  width: 80%;
+  height: 90%;
   padding: 2px;
   background-color: #f6f5f5;
   font-size: 20px;
@@ -62,7 +59,7 @@ export const ModalButtonClose = styled.button`
   width: 90px;
   height: 30px;
   border-radius: 15px;
-  color: #e17a7a;
+  color: #a21818;
   float: right;
   padding: 3px;
   font-size: 18px;
@@ -70,9 +67,8 @@ export const ModalButtonClose = styled.button`
   background-color: #e7dede;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, .15), 0 8px 10px -6px rgba(0, 0, 0, .15);
   transition: all 0.3s ease-in-out;
-
-  &:hover,
-  &:focus {
+   &:hover,
+   &:focus {
     color: black;
     background-color: #a09e9e;
     text-decoration: none;

@@ -9,6 +9,7 @@ import {PhotoGallery} from "./Components/PhotoGallery/PhotoGallery";
 //import photo from './photos/photo-2.json'
 import './index.css';
 import {SecondPage} from "./Components/SecondPage/SecondPage";
+//import {Logotype} from "./Components/logotype/logotype";
 
 
 
@@ -17,8 +18,9 @@ function App() {
   <BrowserRouter>
       <Header/>
       <ButtonViber/>
+      <Navigation/>
 
-  <Navigation/>
+
   <Routes >
 
       <Route exact path="/" element={<PhotoGallery  />} />

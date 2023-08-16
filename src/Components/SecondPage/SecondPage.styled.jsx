@@ -42,8 +42,8 @@ export const ModalPhotoBox = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 9;
-  width: 60%;
-  height: 70%;
+  width: 80%;
+  height: 90%;
   padding: 2px;
   background-color: #f6f5f5;
   font-size: 20px;
