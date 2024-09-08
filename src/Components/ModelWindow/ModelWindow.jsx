@@ -31,12 +31,10 @@ export const  ModelWindow = () => {
     const [num2, setNum2] = useState("");
     const [num3, setNum3] = useState("");
     const [result, setResult] = useState("");
-
     const handleCalculate = () => {
         const sum = Number(num1) + Number(num2) + Number(num3);
         setResult(sum);
     };
-
 
 /////////==calculator-2
     const [number1, setNumber1] = useState("");

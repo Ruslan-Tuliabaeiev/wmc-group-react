@@ -3,7 +3,6 @@ import {FooterConteiner, FooterLogo, FooterParagraph} from "./Futer.styled";
 
 export  const Footer = () => {
 
-
     return (
         <>
         <FooterConteiner>
@@ -11,7 +10,7 @@ export  const Footer = () => {
             <FooterParagraph>Відділ замовлень</FooterParagraph>
             <FooterParagraph>Дніпро</FooterParagraph>
             <FooterParagraph>info@example.com</FooterParagraph>
-            <FooterParagraph><a>+38 099 111 11 11</a></FooterParagraph>
+            <FooterParagraph><a href="tel:+380991111111">+38 099 111 11 11</a></FooterParagraph>
         </FooterConteiner>
         </>
 

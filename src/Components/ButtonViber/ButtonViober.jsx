@@ -1,8 +1,6 @@
 import {ButtonStyle} from "./ButtonViober.styled";
 import Viber from "../icon/viber-svgrepo-com.svg";
 
-
-
 export const ButtonViber = () => {
 
     return (

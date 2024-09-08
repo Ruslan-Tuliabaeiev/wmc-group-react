@@ -11,28 +11,20 @@ import './index.css';
 import {SecondPage} from "./Components/SecondPage/SecondPage";
 //import {Logotype} from "./Components/logotype/logotype";
 
-
-
 function App() {
   return (
   <BrowserRouter>
       <Header/>
       <ButtonViber/>
       <Navigation/>
-
-
-  <Routes >
-
-      <Route exact path="/" element={<PhotoGallery  />} />
-
-      <Route path="/second" element={<SecondPage/>} />
-
-      <Route path="/navigate" element={"hello 333"} />
-
-  </Routes>
+    <Routes >
+        <Route exact path="/" element={<PhotoGallery  />} />
+        <Route path="/second" element={<SecondPage/>} />
+        <Route path="/navigate" element={"hello 333"} />
+    </Routes>
       <ModelWindow></ModelWindow>
       <Footer/>
-</BrowserRouter>
+  </BrowserRouter>
   );
 }
 

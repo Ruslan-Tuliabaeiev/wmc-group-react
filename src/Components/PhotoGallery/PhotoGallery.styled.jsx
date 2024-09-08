@@ -18,7 +18,7 @@ export const PhotoIcon = styled.div`
   list-style: none;
   transition: all 0.7s ease-in-out;
    &:hover {
-    transform: scale(1.5);
+    transform: scale(1.3);
    }
 `;
 
@@ -31,7 +31,7 @@ export const ModalBox = styled.div`
   backdrop-filter: blur(3px);
   z-index: 1;
   background-color: rgba(52, 52, 52, 0.22);
-`
+`;
 
 export const ModalPhotoBox = styled.div`
   position: fixed;

@@ -12,10 +12,8 @@ export const ButtonStyle = styled.button`
   justify-content: center;
   align-items: center;
   fill: white;
-
   margin-top: 10px;
   margin-left: 10px;
-  
   background-color: rgba(7, 84, 159, 0.55);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 255, .25), 0 8px 10px -6px rgba(0, 0, 255, .15);
   transition: all 0.3s ease-in-out;

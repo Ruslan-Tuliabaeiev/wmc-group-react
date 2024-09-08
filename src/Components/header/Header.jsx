@@ -6,6 +6,7 @@ import styles  from './style.module.css'
 export const Header = () => {
 
     return (
+        
 <BoxFuter>
 <ButtonViber>
     <img src={Viber} alt="Viber Logo"  width="40" height="40" className={styles.icon} />
@@ -16,6 +17,7 @@ export const Header = () => {
       <span className={styles.number}>098-891-11-11</span>
     </ButtonTelephone>
 </BoxFuter>
+
     )
 }
 
